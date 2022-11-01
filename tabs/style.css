@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#city1,#city2,#city3{
+    transition: 1s ease;
+    display: none;
+    
+    margin: 10px;
+}
+.playground{
+    border: 1px solid gray;
+    margin: 30px;
+    transition: 1s ease;
+
+}
+.nav-bar{
+    background-color: rgba(0,0,0,0.1);
+    border-bottom: 1px solid gray;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+li.active{
+    background-color: rgba(0,0,0,0.2);
+}

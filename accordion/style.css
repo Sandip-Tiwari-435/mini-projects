@@ -1,0 +1,16 @@
+.section{
+    margin: 10px;
+    background-color: grey;
+    height: 30px;
+    padding: 5px;
+}
+.section:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+#sec1,#sec2,#sec3{
+    border:1px solid black
+}
+#sign1,#sign2,#sign3{
+    float: right;
+}

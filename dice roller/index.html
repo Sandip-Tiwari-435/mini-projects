@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice roller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="result">Hey You! Give us roll</div>
+        <div id="visuals">
+            <div class="dice" id="d1">
+                <div class="dot"></div>
+            </div>
+            <div class="dice" id="d2">
+                <div class="dot"></div>
+                <div class="dot" style="left: 80%;"></div>
+            </div>
+            <div class="dice" id="d3">
+                <div class="dot" ></div>
+                <div class="dot" style="left: 40%"></div>
+                <div class="dot" style="left: 80%"></div>
+            </div>
+            <div class="dice" id="d4">
+                <div class="first">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="sec">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="dice" id="d5">
+                <div class="first">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="sec">
+                    <div class="dot"></div>
+                </div>
+                <div class="third">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="dice" id="d6">
+                <div class="first">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="sec">
+                	<div class="dot"></div>
+                	<div class="dot"></div>
+                </div>
+                <div class="third">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div style="width: max-content; font-size: 50px; display: none;" id="times">X 2</div>
+
+        </div>
+        <div class="btn">
+            <button onclick="fun()">Shake 'em</button>
+        </div>
+    </div>
+    <script>
+        function fun(){
+        let x=Math.floor(Math.random()*6)+1;
+        let y=Math.floor(Math.random()*6)+1;
+        console.log(x,y);
+        document.getElementById('d1').style.display='none';
+        document.getElementById('d2').style.display='none';
+        document.getElementById('d3').style.display='none';
+        document.getElementById('d4').style.display='none';
+        document.getElementById('d5').style.display='none';
+        document.getElementById('d6').style.display='none';
+        document.getElementById('times').style.display='none';
+        if(x==y){document.getElementById('times').style.display='block';}
+        document.getElementById(`d${x}`).style.display='flex';
+        document.getElementById(`d${y}`).style.display='flex';
+
+        document.getElementById('result').innerHTML=x+y;
+    }
+    </script>
+    
+</body>
+</html>

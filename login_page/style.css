@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    
+}
+
+
+form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10%;
+    font-size: larger;
+    background-color: purple;
+    line-height: 30px;
+    width: 30%;
+    padding-top: 30px;
+}
+#avatar{
+    display: block;
+    margin: auto;
+    width: 40%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    padding: 4px 20px;
+    font-size: medium;
+    width: 70%;
+}
+.formalities{
+    margin: 20px;
+
+}
+
+.others{
+    display: flex;
+    justify-content: space-between;
+}

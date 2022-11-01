@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sushi{
+    margin: 30px 40px;
+    cursor: pointer;
+}
+@keyframes jizzer{
+    25%{
+        transform: translate(30px);
+    }
+    75%{
+        transform: translate(-30px);
+    }
+}
+@keyframes sider{
+    25%{
+        transform: scale(2) translate(50px);
+    }
+    50%{
+        transform:scale(1);
+    }
+    
+    75%{
+        transform: scale(2) translate(-50px);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
+@keyframes rotator{
+    to{
+        transform: rotate(2160deg);
+    }
+}
+@keyframes scaler{
+    50%{
+        transform: scale(2);
+    }
+    90%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

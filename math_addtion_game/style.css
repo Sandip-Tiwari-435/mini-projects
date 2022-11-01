@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 30%;
+    padding: 20px;
+    background-color: yellow;
+}
+
+.plus,.equal{
+    transform: scale(2);
+    margin: 10px;
+}
+#first_num,#second_num{
+    border: 3px solid black;
+    height: 100px;
+    width: 100px;height: max-content;
+    font-size: 50px;
+    text-align: center;
+
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caterkillar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" onmousemove="fun(event)">
+        <div class="ball" id="b1" style="z-index: 1;"></div>
+        <div class="ball" id="b2" style="z-index: 2;"></div>
+        <div class="ball" id="b3" style="z-index: 3;"></div>
+        <div class="ball" id="b4" style="z-index: 4;"></div>
+        <div class="ball" id="b5" style="z-index: 5;"></div>
+        <div class="ball" id="b6" style="z-index: 6;"></div>
+        <div class="ball" id="b7" style="z-index: 7;"></div>
+        <div class="ball" id="b8" style="z-index: 8;"></div>
+        <div class="ball" id="b9" style="z-index: 9;"></div>
+    </div>
+    <script>
+        
+        for(let i=1;i<10;i++){
+            let a=Math.floor(Math.random()*255);
+            let b=Math.floor(Math.random()*255);
+            let c=Math.floor(Math.random()*255);
+            let y=Math.floor(Math.random()*100);
+            document.getElementById(`b${i}`).style.cssText=`background-color:rgb(${a},${b},${c});height:${y}px;width:${y}px;border-radius:50%;`;
+        }
+        function fun(event){
+            var xp=0;
+            var yp=0;
+            var x=event.clientX;
+            var q=event.clientY;
+            
+            
+            for(let i=1;i<10;i++){
+                xp+=x-xp;
+                yp+=q-yp;
+                console.log(xp,yp);
+                document.getElementById(`b${i}`).style.cssText=`left:${xp}px;top:${yp}px;`;
+            }
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

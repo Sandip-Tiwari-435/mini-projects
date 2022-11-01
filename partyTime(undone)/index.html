@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PartyTime!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Time to party?</div>
+        <div class="essentials">
+            <p style="margin: 30px;">Enter a birthdate and time to see if it's party time</p>
+            <div class="date" style="display: inline;">
+                <label for="start">Birthdate:</label>
+                <input type="date" id="start">
+            </div>
+            <div class="time" style="margin: 60px;display: inline;">
+                <label for="time">Time:</label>
+                <input type="time" id="time">
+            </div>
+            <input onclick="fun()" style="font-size: 20px;" type="submit">
+            <div id="month"></div>
+            <div id="yearOld"></div>
+            <div id="dayOld"></div>
+            <div id="minuteOld"></div>
+            <div class="real">
+                <div id="ten"></div>
+                <div id="twenty"></div>
+                <div id="fivehun"></div>
+                <div id="onemil"></div>
+                <div id="tenmil"></div>
+                <div id="fiftymil"></div>
+                <div id="onebil"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let monthWord=["Jan","Feb","Mar","apr","jun","jul","aug","sep","oct","nov","dec"];
+        function fun(){
+            let dateControl = document.querySelector('input[type="date"]');
+            const good=dateControl.value.split("-");
+            let year=good[0];
+            let month=good[1];
+            let day=good[2];
+
+            
+
+            let curr=new Date();
+            curr=curr.split(" ");
+
+            let yearOld=parseInt(curr[3])-year;
+            let monthOld=
+            
+            document.getElementById('month').innerHTML=`Your birthday is ${monthWord[month]} ${day}`;
+            document.getElementById('month').innerHTML=`You are ${parseInt(curr[3])-year} years old`;
+            document.getElementById('month').innerHTML=`You are ${parseInt(curr[2])-day} days old`;
+            document.getElementById('month').innerHTML=`Your birthday is ${monthWord[month]} ${day}`;
+
+        }
+    </script>
+    
+</body>
+</html>

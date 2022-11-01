@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+
+}
+.result{
+
+}
+#visuals{
+    display: flex;
+    margin: 50px;
+}
+.dice{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.dot{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+
+    transform-origin: right bottom;
+    background-color: white;
+}
+#d1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#d2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#d3,#d4,#d5,#d6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.first,.sec,.third{
+    display: flex;justify-content: space-between;
+}
+#d5 .sec{
+    justify-content: center;
+}
+
+#result{
+    text-align: center;
+    font-size: 60px;
+    font-family: sans-serif;
+    margin: 40px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+button{
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: green;
+}

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+    background-color: white;
+    font-size: 50px;
+    padding: 40px;
+    box-shadow: 2px 2px 6px;
+}
+.essentials{
+    margin: 40px;
+    font-size: 20px;
+}
+.real{
+    margin: 40px;
+}

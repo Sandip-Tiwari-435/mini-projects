@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripping Boxes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="1" onclick="func(1)"></div>
+        <div class="box" id="2" onclick="func(2)"></div>
+        <div class="box" id="3" onclick="func(3)"></div>
+        <div class="box" id="4" onclick="func(4)"></div>
+        <div class="box" id="5" onclick="func(5)"></div>
+        <div class="box" id="6" onclick="func(6)"></div>
+        <div class="box" id="7" onclick="func(7)"></div>
+        <div class="box" id="8" onclick="func(8)"></div>
+        <div class="box" id="9" onclick="func(9)"></div>
+        <div class="box" id="10" onclick="func(10)"></div>
+        <div class="box" id="11" onclick="func(11)"></div>
+        <div class="box" id="12" onclick="func(12)"></div>
+        <div class="box" id="13" onclick="func(13)"></div>
+        <div class="box" id="14" onclick="func(14)"></div>
+        <div class="box" id="15" onclick="func(15)"></div>
+        <div class="box" id="16" onclick="func(16)"></div>
+    </div>
+    <script>
+        for(let i=1;i<17;i++){let x=Math.floor(Math.random()*255);
+        let y=Math.floor(Math.random()*255);
+        let z=Math.floor(Math.random()*255);
+        document.getElementById(`${i}`).style.cssText=`background-color:rgb(${x},${y},${z});`;
+        }
+
+        let arr=["heighter 4s ease-out 1 forwards","hanger 4s ease-out 1 forwards","crawler 4s linear 1 forwards"];
+        
+
+        function func(x){
+            let yes=Math.floor(Math.random()*3);
+            document.getElementById(`${x}`).style.setProperty("animation",arr[yes]);
+            setTimeout(function(){document.getElementById(`${x}`).style.setProperty("animation","none");},4000);
+        }
+    
+    </script>
+</body>
+</html>

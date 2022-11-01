@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The memory game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Level 1</h1>
+    </div>
+    <div class="container">
+        <div class="first-row">
+            <div class="button" onclick="yes('green')" id="green"></div>
+            <div class="button" onclick="yes('red')" id="red"></div>
+        </div>
+        <div class="second-row">
+            <div class="button" onclick="yes('yellow')" id="yellow"></div>
+            <div class="button" onclick="yes('blue')" id="blue"></div>
+        </div>
+    </div>
+    <script>
+        var arr = []; var x; var current = [];
+        var sample = ['green', 'red', 'yellow', 'blue'];
+        var button = document.getElementsByClassName('button');
+
+        function fun() {
+            console.log('Hello World');
+        }
+
+        function yes(z) {
+            current.push(z);
+        }
+
+        for (let i = 1; i < 5; i++) {
+            setTimeout(function timer() {
+                x = Math.floor(Math.random() * 4);
+                console.log(x);
+                arr.push(sample[x]);
+                console.log(arr);
+                for (let j = 0; j < i; j++) {
+                    setTimeout(function timer() {
+                        document.getElementById(`${arr[j]}`).setAttribute("style","animation:impulse 0.5s ease 1 forwards ;");
+                        setTimeout(function timer() {
+                            document.getElementById(`${arr[j]}`).setAttribute("style","animation:none;");
+                        },500);
+                    }, j * 1500);
+
+
+                }
+            }, i * 1000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

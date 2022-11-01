@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer">
+        <h1 style="font-size: 30px;margin: 30px;text-decoration: underline;">Click on the clock to change it's color</h1>
+        <div id="container" onclick="changeIt()">
+            <div id="second-hand"></div>
+            <div id="minute-hand"></div>
+            <div id="hour-hand"></div>
+            <div class="labels">
+                <div class="first">12</div>
+                <div class="second" style="padding:0 130px;margin-top:34.83px">
+                    <div>11</div>
+                    <div>1</div>
+                </div>
+                <div class="third" style="padding:0 34.83px;margin-top:130px;">
+                    <div>10</div>
+                    <div>2</div>
+                </div>
+                <div class="fourth" style="padding:0 0px;margin-top:245px;">
+                    <div>9</div>
+                    <div>3</div>
+                </div>
+                <div class="fifth" style="padding:0 34.83px;margin-top:360px;">
+                    <div>8</div>
+                    <div>4</div>
+                </div>
+                <div class="sixth" style="padding:0 130px;margin-top:455.17px;">
+                    <div>7</div>
+                    <div>5</div>
+                </div>
+                
+                <div class="seventh" style="margin-top:490px;">6</div>
+            </div>
+        </div>
+        <div class="options">
+            <button onclick="document.getElementById('second-hand').style.cssText='animation-timing-function:linear;'">Analog</button>
+            <button onclick="document.getElementById('second-hand').style.cssText='animation-timing-function:steps(60);'">Digital</button>
+        </div>
+    </div>
+    <script>
+        function changeIt(){document.getElementById('container').style.cssText=`background-color:rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.random()});`}
+    </script>
+    
+</body>
+</html>

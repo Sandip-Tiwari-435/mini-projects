@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --divw:40px;
+    --wlevel_1:300px;
+    
+}
+
+body{
+    background-color: blueviolet;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    text-align: center;
+}
+#container{
+    margin-top: 200px;
+    
+}
+#box{
+    margin: 14px;
+}
+
+.first-line{
+    font-size: 50px;
+}
+.sec-line{
+    font-size: 20px;
+}
+
+button{
+    background-color: navy;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/**********Level 1************/
+
+a{
+    text-decoration: none;
+}
+
+#left-div{
+    width: var(--divw);
+    height: var(--hlevel_1);
+    border-radius: var(--hlevel_1);;
+    border-right: var(--rlevel_1) solid red;
+}
+
+#path{
+    width: var(--wlevel_1);
+    height: var(--hlevel_1);
+    
+
+    background-color: white;
+}
+
+#right-div{
+    width: var(--divw);
+    height: var(--hlevel_1);
+    border-radius: var(--hlevel_1);
+    border-left: var(--rlevel_1) solid blue;
+
+}
+
+#results{
+    margin-top: 200px;
+    font-size: 50px;
+}
+

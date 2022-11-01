@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div onclick=disp(1) class="section">
+        <span>Section-1</span>
+        <span id="sign1">-</span>
+    </div>
+    <div id="sec1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum at quibusdam deserunt quam illo quidem explicabo nisi. Unde illum ab nulla reprehenderit itaque enim id ex impedit nostrum accusantium?</div>
+
+    <div onclick=disp(2) class="section">
+        <span>Section-2</span>
+        <span id="sign2">-</span>
+    </div>
+    <div id="sec2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum at quibusdam deserunt quam illo quidem explicabo nisi. Unde illum ab nulla reprehenderit itaque enim id ex impedit nostrum accusantium?</div>
+
+    <div onclick=disp(3) class="section">
+        <span>Section-3</span>
+        <span id="sign3">-</span>
+    </div>
+    <div id="sec3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore voluptatum at quibusdam deserunt quam illo quidem explicabo nisi. Unde illum ab nulla reprehenderit itaque enim id ex impedit nostrum accusantium?</div>
+
+    <script>
+        function disp(n){
+            var sec= document.getElementById(`sec${n}`);
+            var sign= document.getElementById(`sign${n}`);
+
+            if(sec.style.display=="none") sec.style.display="block";
+            else sec.style.display="none";
+            if(sign.innerHTML=='+') sign.innerHTML='-';
+            else sign.innerHTML='+';
+        }
+    </script>
+</body>
+</html>

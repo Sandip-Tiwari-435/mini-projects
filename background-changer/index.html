@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>-
+
+<body>
+    <img id="myImage" src="https://source.unsplash.com/random/1000x600?sig=${Math.random()}" alt="">
+    <div class="button"><button onclick="document.getElementById('myImage').src=`https://source.unsplash.com/random/1000x600?sig=${Math.random()}` ">Change this image</button></div>
+</body>
+</html>

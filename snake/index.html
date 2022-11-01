@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="score">Score:0</p>
+
+    <div class="container">
+        <div id="bod"></div>
+        <div id="food"></div>
+    </div>
+    <script>
+        let posX=0;
+        let posY=0;
+        let height=40;
+
+        let foodX=0;
+        let foodY=0;
+        let block=20;
+        let score=0;
+        let angle=0;
+
+        
+        
+        function foodPos(){
+            foodX=Math.floor(Math.random()*610);
+            foodY=Math.floor(Math.random()*340);
+            console.log(foodX,foodY);
+            document.getElementById('food').style.cssText=`top:${foodY}px;right:${foodX}px;`;
+
+        }
+
+        foodPos();
+
+
+        const timer = ms => new Promise(res => setTimeout(res, ms));
+
+        async function yes() {
+            
+        }
+        
+        document.addEventListener("keydown",function(event){
+            if(event.keyCode==87){
+                posY-=10;
+                document.getElementById('bod').style.cssText=`right:${posX}px;transform:translateY(${posY}px);background:linear-gradient(${angle}deg,yellow 5%,red 95%);height:${height}px;`;
+
+            }
+            else if(event.keyCode==65){
+                posX+=10;
+                document.getElementById('bod').style.cssText=`top:${posY}px;transform:rotate(90deg) translateY(${posX}px);background:linear-gradient(${angle-180}deg,yellow 5%,red 95%);height:${height}px;`;
+
+                
+                
+            }
+            else if(event.keyCode==68){
+                posX-=10;
+                document.getElementById('bod').style.cssText=`top:${posY}px;transform:rotate(90deg) translateY(${posX}px);background:linear-gradient(${angle}deg,yellow 5%,red 95%);height:${height}px;`;
+
+                
+                
+            }
+            else if(event.keyCode==83){
+                posY+=10;
+                document.getElementById('bod').style.cssText=`right:${posX}px;transform:translateY(${posY}px);background:linear-gradient(${angle-180}deg,yellow 5%,red 95%);height:${height}px;`;
+
+            }
+            
+            console.log(posX,posY);
+            if (posX>=foodX-block&&posX<=foodX+block&&posY>=foodY-block&&posY<=foodY+block) {height+=0;score+=1;document.getElementById('score').innerHTML=`Score:${score}`;foodPos();};
+            if(posX>=610||posX<=-610||posY>=310||posY<=-310) document.getElementById('score').innerHTML="You lost";
+        })
+        
+
+        
+        
+
+    </script>
+</body>
+</html>

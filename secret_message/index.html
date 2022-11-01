@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <pre id="first-part">
+            
+        </pre>
+        <pre id="second-part">
+
+        </pre>
+    </div>
+    <script>
+        let f="We are the champions my friend and we will keep on fighting till the end";
+        let g="";
+        let h="";
+        for(let i=0;i<f.length;i++){
+            if(i%2==0){g+=f[i];h+=" ";}
+            else {h+=f[i];g+=" ";}
+        }
+        document.getElementById('first-part').innerHTML=`${g}`;
+        document.getElementById('second-part').innerHTML=`${h}`;
+        console.log(g);
+        console.log(h);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Search filter/dropdown</h1>
+    <div class="container">
+        <button onclick="yes()">Dropdown</button>
+        <div class="wrapper">
+            <input id="inp" type="text" placeholder="Type to search">
+            <a style="border-top: 3px solid gray;" href="#">Avv</a>
+            <a href="#">Bcc</a>
+            <a href="#">Cdd</a>
+            <a href="#">Daaa</a>
+            <a href="#">Eaaaaaa</a>
+            <a href="#">Fesgo</a>
+            <a href="#">Gzzzzzz</a>
+        </div>
+    </div>
+    <script>
+        var inp=document.getElementById('inp');
+        var a=document.getElementsByTagName('a')
+        var wrapper=document.getElementsByClassName('wrapper')[0];
+        function yes(){
+            if(wrapper.classList.contains('show')) wrapper.classList.remove('show');
+            else wrapper.classList.toggle('show');
+        }
+        inp.addEventListener("keyup",function(){
+            var letter=inp.value.toLowerCase();
+            console.log(letter);
+            for(let i=0;i<a.length;i++){
+                if(!a[i].innerHTML.toLowerCase().match(letter)) a[i].style.display='none';
+                else a[i].style.display='block';
+            }
+        })
+
+    </script>
+    
+</body>
+</html>

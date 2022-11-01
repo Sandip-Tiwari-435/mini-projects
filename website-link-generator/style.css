@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background: url('https://i.pinimg.com/736x/b0/33/ce/b033ceb1b81b75047e8c1fb2c08a4c85.jpg') no-repeat rgba(0, 0, 0, 0.44);background-size: cover;
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    margin: 40px;
+    margin-bottom: 0;
+    padding: 20px ;
+    background-image: linear-gradient(-45deg,black,rgba(255,0,0,0.5));
+    border-bottom: 1px solid black;
+}
+.container{
+    border: 5px solid navy;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+    box-shadow: 30px 30px 60px rgba(255,0,0,0.5);
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.64);
+}
+
+form{
+    text-align: center;
+    display: flex;
+    background-image:linear-gradient(-45deg,rgba(255,255,255,0.1),rgba(0,0,0,0.3));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 80px;
+    padding: 2%;
+    border: 1px solid black;
+    
+}
+
+form p{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+em{
+    margin-bottom: 30px;
+    font-size: medium;
+}
+#userInput{
+    
+    width: 50%;
+    height: 80px;
+    font-size: 20px;
+    overflow:scroll;
+}
+#submit{
+    background-color: royalblue;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.links{
+    background-image: linear-gradient(-50deg,rgba(255,255,0,0.5),rgba(0,0,0,0.3)) ;
+    margin: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 20px 20px 50px rgba(255,0,0,0.3);
+
+    border: 1px solid black;
+}
+#link a,#img-link a{
+    font-size: 30px;
+    color: navy;
+    font-weight: bold;
+    text-decoration: none;
+}
+#img-link{
+    margin-right: 10%;
+}
+#link::before{
+    font-size: 30px;
+    content:'Website: ';
+}
+#img-link::before{
+    font-size: 30px;
+    content:'Images for: ';
+}
+
+
+

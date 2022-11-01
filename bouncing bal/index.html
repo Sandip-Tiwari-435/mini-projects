@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing ball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="text">
+            <h3>Catch The Bouncing Ball</h3>
+            <p>Click the ball to advance to the next level.</p>
+            <div id="pen">Penalty: 0</div>
+
+        </div>
+        <div onclick="check()" id="ball">
+
+        </div>
+        <div id="result">
+            <div id="remark"></div>
+            <div id="level"></div>
+        </div>
+    </div>
+    <script>
+        let time=2;
+        let count=1;
+        let pen=0;
+        game=true;
+        let s=1;
+        let arr=['Good','Excellent','u r on fire','way to go','wa wa wee wa'];
+        document.getElementById('container').addEventListener('click',function(){pen+=1;if(pen>10) {game=false;document.getElementById('container').innerHTML='You have lost it';} document.getElementById('pen').innerHTML=`Penalty: ${pen}`;});
+        
+        
+        
+        function check(){
+            if(game=true){time-=0.2;
+
+            pen-=2;
+            
+            document.getElementById('ball').style.cssText='display:none;';
+            document.getElementById('result').style.display='block';
+            document.getElementById('remark').innerHTML=arr[count-1];
+            document.getElementById('level').innerHTML=`level ${s+1}`;
+
+            count=count<arr.length?count+1:arr.length-1;
+            s++;
+            
+            setTimeout(function fun(){document.getElementById('result').style.display='none';document.getElementById('ball').style.cssText=`display:block;background-color:red;animation: bounce ${time>0.3?time:0.2}s ease-in infinite alternate;`;},2000);
+            }
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

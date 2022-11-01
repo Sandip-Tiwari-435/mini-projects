@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiggler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="first-row">
+            <img src="https://jenniferdewalt.com/images/seaweed.png" alt="" class="sushi" id="1" onclick="func(1)">
+            <img src="https://jenniferdewalt.com/images/eel2.png" alt="" class="sushi" id="2" onclick="func(2)">
+            <img src="https://jenniferdewalt.com/images/roll1.png" alt="" class="sushi" id="3" onclick="func(3)">
+        </div>
+        <div class="second-row">
+            <img src="https://jenniferdewalt.com/images/pinkfish.png" alt="" class="sushi" id="4" onclick="func(4)">
+            <img src="https://jenniferdewalt.com/images/rolls.png" alt="" class="sushi" id="5" onclick="func(5)">
+            <img src="https://jenniferdewalt.com/images/sake.png" alt="" class="sushi" id="6" onclick="func(6)">
+
+        </div>
+        <div class="third-row">
+            <img src="https://jenniferdewalt.com/images/masago.png" alt="" class="sushi" id="7" onclick="func(7)">
+            <img src="https://jenniferdewalt.com/images/whitefish.png" alt="" class="sushi" id="8" onclick="func(8)">
+            <img src="https://jenniferdewalt.com/images/fancy_roll.png" alt="" class="sushi" id="9" onclick="func(9)">
+
+        </div>
+    </div>
+    <script>
+        function func(i){let arr=["animation: scaler 2s ease-in 1 alternate;","animation: rotator 2s ease-in-out 1 alternate;","animation: sider 2s ease-in-out 2 forwards;","animation: jizzer 0.1s linear 5 forwards;"]
+        let randChoice=arr[Math.floor(Math.random()*4)];
+        document.getElementById(`${i}`).style.cssText=randChoice;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="compDiv">
+            <div class="label">Computer</div>
+            <div id="compic"><img src="https://jenniferdewalt.com/images/left_fist.png"></div>
+        </div>
+        <div id="resultDiv">Choose your weapon</div>
+        <div class="youDiv">
+            <div class="label">You</div>
+            <div id="youpic"><img src="https://jenniferdewalt.com/images/right_fist.png"></div>
+            <div class="btns">
+                <button onclick="fun(0)" id="rock">rock</button>
+                <button onclick="fun(1)" id="paper">paper</button>
+                <button onclick="fun(2)" id="scissor">scissor</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function fun(x){
+            let arr=["rock","paper","scissors"];
+            let d=Math.floor(Math.random()*2);
+            let c=arr[d];
+            let y=arr[x];
+            
+            
+
+            document.getElementById('compic').innerHTML=`<img src="https://jenniferdewalt.com/images/left_fist.png">`;
+            document.getElementById('youpic').innerHTML=`<img src="https://jenniferdewalt.com/images/right_fist.png">`;
+            setTimeout(function(){document.getElementById('compic').style.setProperty("animation","shake 0.1s linear 5 forwards");
+            document.getElementById('youpic').style.setProperty("animation","shake 3s linear 5 forwards");},2)
+            document.getElementById('compic').style.setProperty("animation","none");
+            document.getElementById('youpic').style.setProperty("animation","none");
+
+            setTimeout(function(){document.getElementById('compic').innerHTML=`<img src="https://jenniferdewalt.com/images/${c}.png">`;
+            document.getElementById('youpic').innerHTML=`<img src="https://jenniferdewalt.com/images/${y}.png">`;
+            
+            if(x+1==d||x-2==d) document.getElementById('resultDiv').innerHTML="You lose";
+            else if(x==d+1||x==d-2) document.getElementById('resultDiv').innerHTML="You win";
+            else document.getElementById('resultDiv').innerHTML="Tie";},500)
+        }
+    </script>
+    
+</body>
+</html>

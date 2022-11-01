@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawingA(sa)PP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div onmousemove="drawAcircle(event)" id="yes" class="drawArea">
+
+        </div><br>
+        <p id="demo"></p>
+    </div>
+    <script>
+        function drawAcircle(event) {
+            var cx = event.clientX;
+            var cy = event.clientY;
+            document.getElementById('demo').innerHTML = `cx ${cx} cy: ${cy}`;
+            var div = document.createElement("div");
+            div.style.width = "50px";
+            div.style.height = "50px";
+            div.style.borderRadius="25px";
+            div.style.top=`${cy-25-4}px`;
+            div.style.left=`${cx-25-110}px`;
+            div.style.position="absolute";
+            div.style.background = "red";
+            document.getElementById('yes').appendChild(div);
+        }
+    </script>
+</body>
+
+</html>

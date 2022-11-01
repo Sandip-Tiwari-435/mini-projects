@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>additionGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="first_num"></div>
+        <div class="plus">+</div>
+        <div id="second_num"></div>
+        <div class="equal">=</div>
+        <form>
+            <input id="yes" style="font-size: 30px;" type="text" value="" required>
+            <button id="btn" onclick="naya()" style="background-color: red;color: white;">check</button>
+        </form>
+    </div>
+    <script>
+
+        var p = 0;
+        var q = 0;
+        let x = Math.floor(Math.random() * 1000);
+        let y = Math.floor(Math.random() * 1000);
+        document.getElementById('first_num').innerHTML = x;
+        document.getElementById('second_num').innerHTML = y;
+        p=x;
+        q=y;
+
+
+        function naya() {
+            if (document.getElementById('yes').value.length > 0) {
+                document.getElementById('yes').value == p + q?alert('CORRECT'):alert('INCORRECT');
+                let x = Math.floor(Math.random() * 1000);
+                let y = Math.floor(Math.random() * 1000);
+                document.getElementById('first_num').innerHTML = x;
+                document.getElementById('second_num').innerHTML = y;
+                p = x;
+                q = y;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+            --wlevel_1:500px;
+            --hlevel_1:20px;
+            --rlevel_1:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div style="display: flex;height: max-content;" id="container">
+            <div id="left-div"></div>
+            <div id="path"></div>
+            <div id="right-div"></div>
+            
+        </div>
+        <div id="results" style="display:none;">
+            <div id="text"></div>
+            <a href="level_4.html"><button id="next">Next plz</button></a>
+            <a href="#"><button onclick="location.reload()" id="again" style="display: none;">Try again</button></a>
+            <a href="index.html"><button id="all" style="display: none;">All over again</button></a>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#food{
+    position:relative;
+    width: 20px;height: 20px;border-radius: 50%;background-color: rgb(163, 114, 24);
+    transform-origin: center;
+}
+
+p{
+    position: absolute;
+    font-size: 50px;
+}
+
+#bod{
+    width: 10px;
+    height: 40px;
+    transform-origin: center;
+    background:linear-gradient(0deg,yellow 10%,red 90%);
+    position: relative;
+}

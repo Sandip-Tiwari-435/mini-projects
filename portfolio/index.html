@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation#2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <h1 class="nig">Hello, My name is Sandip.</h1>
+            <p id="welcome">Welcome to my portfolio</p>
+        </div>
+
+        <div class="info">
+            <div class="my-personality">
+                <h2>My Personality</h2>
+                <ul>
+                    <li id="f"></li>
+                    <li id="s"></li>
+                    <li id="t"></li>
+                </ul>
+            </div>
+            <div class="playground">
+                <div class="first-level" id="first-level">
+                    <h2>Please help me find my personality</h2>
+                    <div class="inside">
+                        <h4>Who is the fastest animal?</h4>
+                        <input type="radio" name="fast" id="rabbit" value="rabbit">
+                        <label for="rabbit">Rabbit</label><br>
+                        <input type="radio" name="fast" id="cheetah" value="cheetah">
+                        <label for="cheetah">Cheetah</label><br>
+                        <input type="radio" name="fast" id="giraffe" value="giraffe">
+                        <label for="giraffe">Giraffe</label><br>
+                        <input id="button" onclick="checkPersonality()" type="submit">
+
+                    </div>
+                </div>
+                <div id="first-level"></div>
+
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        let first = document.getElementById('first-level');
+        let result1=document.getElementById('result1');
+        function checkPersonality(){
+            first.style.display='none';
+            if(document.querySelector('input[name="fast"]:checked').value=="cheetah"){result1.innerHTML="I am as smart as you are";}
+            else result1.innerHTML="Atleast I am smarter than you are<br>I got that right my first time."
+        }
+    </script>
+</body>
+</html>

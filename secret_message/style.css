@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+    width: 100vw;
+    border: 1px solid black;
+
+}
+#first-part{
+    margin-top: 350px;
+    position: fixed;
+    
+}
+#second-part{
+    margin: 1000px 0px;
+    justify-content: left;
+   
+    
+}

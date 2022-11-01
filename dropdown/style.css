@@ -1,0 +1,28 @@
+button{
+    font-size: 20px;
+    background-color: red;
+}
+.container,.container1{
+    position: relative;
+    display: inline-block;
+}
+.nav-bar{
+    position: absolute;
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.8);
+    display: none;
+}
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: block;
+}
+a:hover{
+    opacity: 0.8;
+}
+.container:hover .nav-bar{
+    display: block;
+    
+}

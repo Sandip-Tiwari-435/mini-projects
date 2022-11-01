@@ -1,0 +1,113 @@
+:root{
+    --h: 100px;
+    --half: 50px;
+}
+.container{
+    display: flex;
+}
+
+.item1{grid-area: o1;}
+.item2{grid-area: o2;}
+.item3{grid-area: o3;}
+.item4{grid-area: o4;}
+.item5{grid-area: o5;}
+.item6{grid-area: o6;}
+.item7{grid-area: o7;}
+.item8{grid-area: o8;}
+.item9{grid-area: o9;}
+.item10{grid-area: o10;}
+.item11{grid-area: o11;}
+.item12{grid-area: o12;}
+.item13{grid-area: o13;}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 'o1 o2''o3 o4''o5 o4''o6 o6''o7 o8''o9 o9''o10 o11''o12 o13';
+    width: max-content;
+}
+.grid-container > div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+#o2{
+    border-right: var(--h) solid transparent;
+    border-bottom: var(--h) solid red;
+}
+#o1{
+    border-left: var(--h) solid transparent;
+    border-bottom: var(--h) solid red;
+}
+#o3{
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: var(--h) solid red;
+}
+#o4{
+    width: 30px;
+    height: 200px;
+    background-color: red;
+}
+#o5{
+    width: var(--h);
+    height: var(--h);
+    background-color: red;
+}
+#o6{
+    width: 200px;
+    height: 30px;
+    background-color: red;
+}
+#o7{
+    width: var(--half);
+    height: var(--h);
+    background-color: red;
+}
+#o8{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: red;
+    margin: auto;
+
+}
+#o9{
+    width: 100px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: red;
+}
+#o10{
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    background-color: red;
+}
+#o12{
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 50px;
+    background-color: red;
+}
+#o11{
+    width: 100px;
+    height: 50px;
+    transform: skew(20deg);
+    background-color: red;
+}
+#o13{
+    width: 100px;
+    height: 50px;
+    transform: skew(-20deg);
+    background-color: red;
+}
+
+#work-space{
+    height: 100vh;
+    width: 80%;
+    background-color: black;
+}
+

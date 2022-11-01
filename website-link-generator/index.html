@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link-generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="intro">This website will generate a random link based on what you type in the input box. Have fun!</h1>
+        <form>
+            <p>Type something or copy paste the below text</p>
+            <em id="sampleText">"Quick brown fox jumps over the lazy dog"</em>
+            <textarea type="text" id="userInput"></textarea>
+            <button type="button" id="submit" onclick="generate_link()">Submit</button>
+        </form>
+        <div class="links">
+            <p id="link"></p>
+            <p id="img-link"></p>
+        </div>
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

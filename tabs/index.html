@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs toggler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tabs</h1>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="playground">
+        <div class="nav-bar">
+            <ul>
+                <li onclick="yes(1)">London</li>
+                <li onclick="yes(2)">Paris</li>
+                <li onclick="yes(3)">Tokyo</li>
+            </ul>
+        </div>
+        <div class="description">
+            <div id="city1">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div id="city2">
+                <h2>Paris</h2>
+                <p>Paris is the capital city of France.</p>
+            </div>
+            <div id="city3">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital city of Japan.</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var city=document.getElementsByClassName('city');
+        var prev=document.getElementById(`city1`);
+        function yes(n){
+            prev.style.display="none";
+            prev=document.getElementById(`city${n}`);
+            prev.style.display="block";
+        }
+    </script>
+    
+</body>
+</html>

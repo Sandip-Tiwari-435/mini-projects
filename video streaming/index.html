@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe src="audio/Dehao Zhang - Ching Chang Hon Chi Ear Bleed.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+    <script>
+        x=0;
+        var loc=window.location.href.split("?");
+        var times=parseInt(loc[loc.length-1]);
+           
+        var link='';
+        var list=['wok','johnxina']
+        console.log(times);
+        var version=loc[loc.length-2];
+        list.splice(list.indexOf(version),1);
+        console.log(version);
+        if(version=='wok') link='https://i.kym-cdn.com/photos/images/newsfeed/002/229/102/5c5.jpg';
+        else if(version=='johnxina') link='https://img-9gag-fun.9cache.com/photo/axMn232_700bwp.webp'
+        while(x!=2){
+            var width=Math.floor(Math.random()*900)+10;
+            var height=Math.floor(Math.random()*700)+200;
+            var top=Math.floor(Math.random()*700)+30;
+            var left=Math.floor(Math.random()*700)+10;
+            var nice=window.open('','_blank','width='+width+',height='+height+',top=300'+',left='+left+',resizable=yes,scrollbars=yes,toolbars=yes');
+            nice.document.write("<div style='width:100vw;height:100vh;background:url("+link+") no-repeat center;background-size:cover;'></div>");
+            
+            x++;
+        }
+        alert('now replace the '+version+' in the url by '+list[0])
+    </script>
+</body>
+
+</html>

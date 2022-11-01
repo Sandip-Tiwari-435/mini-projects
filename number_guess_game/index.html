@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">
+            <h2>Number guessing game</h2>
+            <p>Try and guess a number between 0 and 100</p>
+            <p>You have 10 attempts to guess it</p>
+        </div>
+        <div class="ground">
+            <h1>Guess a number</h1>
+            <input id="user" type="text" width="200px" height="100px" required><br>
+            <button onclick="check()"
+                style="background-color: yellow;cursor: pointer;;width: max-content;font-size: 20px;color: black;">Submit
+                guess</button>
+            <p id="previous_guess"></p>
+            <p id="guess_rem"></p>
+            <h2 id="result" style="background-color: purple;">Result will be shown here</h2>
+        </div>
+    </div>
+    <script>
+        let arr = "";
+        let guess_remaining = 10;
+        let actualNo = Math.floor(Math.random() * 100);
+        console.log(actualNo)
+
+        function check() {
+            if (guess_remaining > 0 && Number(document.getElementById('user').value) < 101) {
+                guess_remaining--;
+                arr += document.getElementById('user').value + ' ';
+                console.log(Number(document.getElementById('user').value))
+
+                document.getElementById('previous_guess').innerHTML = "Previous guesses: " + arr;
+                document.getElementById('guess_rem').innerHTML = "Guesses Remaining: " + guess_remaining;
+
+
+                if (Number(document.getElementById('user').value) - actualNo == 0) {document.getElementById('result').innerHTML = "You won<br>";var node=document.createElement("BUTTON");node.style.cursor="pointer";node.setAttribute("onclick","location.reload()");node.textContent="Try again";document.getElementById('result').appendChild(node);}
+                else if (Number(document.getElementById('user').value) > actualNo) {
+                    if (Number(document.getElementById('user').value) - actualNo >= 10) document.getElementById('result').innerHTML = "Too High"
+                    else if (Number(document.getElementById('user').value) - actualNo < 10) document.getElementById('result').innerHTML = "High"
+                }
+                else {
+                    if (actualNo - Number(document.getElementById('user').value) >= 10) document.getElementById('result').innerHTML = "Too Low"
+                    else if (actualNo - Number(document.getElementById('user').value) < 10) document.getElementById('result').innerHTML = "Low"
+                }
+            }
+            else if (guess_remaining > 0) { document.getElementById('result').innerHTML = "u inputted a number outside desired range"; check(); }
+            else document.getElementById('result').innerHTML = "You lost because u run out of guesses"
+
+        }
+    </script>
+</body>
+
+</html>

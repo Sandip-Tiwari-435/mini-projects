@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop em</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="location.reload()">Do it again!</button>
+    
+    <script>
+        for(let i=2;i<Math.floor(Math.random()*1000);i++){
+            setTimeout(function(){var ball=document.createElement("DIV");ball.setAttribute("id","div1");
+            ball.style.cssText=`position:absolute;width:50px;height:50px;border-radius:25px;top:${Math.floor(Math.random()*1000)}px;left:${Math.floor(Math.random()*1000)}px;background-color:rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.random()});`;
+            document.body.appendChild(ball);},300*i);
+        }
+        
+
+        
+        
+    </script>
+</body>
+</html>

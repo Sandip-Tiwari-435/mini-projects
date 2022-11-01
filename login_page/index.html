@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="start">
+        <h1>Modal login form</h1>
+        <button onclick=yes() style="display: block;cursor: pointer;">Login</button>
+    </div>
+    <div class="main-container" id="main">
+        
+
+        <form action="action_page.php">
+
+            <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="avatar" id="avatar">
+
+            <div class="formalities">
+                <label for="uname">Username</label><br>
+                <input type="text" name="uname" placeholder="Enter your username" required><br>
+                <label for="pswd">Password</label><br>
+                <input type="text" name="pswd" placeholder="Enter your password" required><br>
+                <input type="submit" style="padding: 10px;background-color:green;" value="Login"><br>
+                <input type="checkbox" style="width: 10%;"name="remember">
+                <label for="remember">Remember me?</label>
+                
+                <div class="others">
+                    <button id="cancel">Cancel</button>
+                    <p style="display: inline-block;">Forgot Password?</p>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <script>
+        var pop=document.getElementById('main');
+        function yes(){
+            pop.style.display="flex";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+.outer-container::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    border-right: 5px solid black;
+    background-color:rgba(0,0,255,0.4);
+    animation: reload 3s 13s ease-in-out infinite alternate;
+}
+@keyframes reload{
+    from{z-index: 68;}
+    to{right:100%;z-index:69;}
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url('https://wallpaperaccess.com/full/1218577.jpg') no-repeat;background-position: center; background-size: cover;
+}
+.container::after{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    background-color: white;
+    border-right: 5px solid black;
+    z-index: 67;
+    animation: bring-it-on 2s 9s ease-in-out infinite alternate;
+}
+@keyframes bring-it-on{
+    to{right:100%;}
+    
+}
+
+
+
+h1{
+    font-size: 50px;
+    font-family: 'Source Code Pro',monospace;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    z-index: 69;
+}
+
+
+h1::before{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    background-color: white;
+    border-left: 1px solid black;
+    z-index: 70;
+    animation: yes 7s steps(25) forwards;
+}
+
+
+@keyframes yes{
+    99.9%{border-left: 1px solid black;}
+    to{left:100%;border-left: none;}
+}
+
+p{
+    font-family: 'Source sans serif',sans-serif;
+    font-size: 18px;
+    color:rgba(0,0,0,0);
+    position: relative;
+    animation: slide-up 1s 8s ease forwards;
+}
+@keyframes slide-up{
+    from{color:blue;top:90px}
+    to{color:black;z-index: 69;top:10px;}
+}
+
+@media screen and (max-width:378){}
+
+.info{
+    display: flex;
+    margin: 50px;
+    padding: 50px;
+    border-top: 2px solid black;
+    line-height: 30px;
+    
+}
+.info h2{
+    margin-bottom: 20px;
+}
+.my-personality{
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    border-right: 5px solid rgb(154,152,252);
+
+}
+.my-personality ul{
+    font-size: 20px;
+}
+.my-personality h2{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Source Code Pro',monospace;
+
+}
+
+.playground{
+    padding: 20px;
+    width: 50%;
+}
+.first-level h4{
+    font-weight: 200;
+}
+.first-level{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.inside{
+    position: relative;
+    left: 30px;
+}
+.playground #button{
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 1px;
+    background-color: rgb(46,80,128);
+    color: white;
+}
+

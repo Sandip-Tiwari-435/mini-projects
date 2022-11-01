@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 55%;
+    height: 85vh;
+    position: relative;
+    border: 1px solid black;
+
+}
+.text{
+    position: absolute;
+    width: 30%;
+    font-size: 20px;
+
+}
+#result{
+    position: absolute;
+    width: 30%;
+    font-size: 20px;
+    right:30%;
+    top:50%;
+
+}
+.text h3{
+    font-size: 30px;
+}
+#ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#ball{
+    position: absolute;
+    right: 30%;
+    background-color: cyan;
+    animation: bounce 2s ease-in 2s infinite alternate;
+    
+    cursor: pointer;
+    
+}
+@keyframes bounce{
+    0%{
+        top:0;
+        
+    }
+    98%{
+        width: 100px;
+    }
+    100%{
+        top:80%;
+        width: 110px;
+
+    }
+}

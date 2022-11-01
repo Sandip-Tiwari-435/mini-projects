@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="yes()">Open modal</button>
+    </div>
+    <div class="popup">
+        <div class="header">
+            <h1>Modal header</h1>
+            <div onclick='closer()' class="sign">X</div>
+        </div>
+        <div class="content">
+            <p>Hello world</p>
+            <p>Modals are awesome</p>
+            <p>Go back to <a href="www.cute.com"><button style="font-size: small;">W3 schools</button></a> </p>
+        </div>
+        <div class="footer">
+            <h2>Modal footer</h2>
+        </div>
+    </div>
+    <script>
+        var popup=document.getElementsByClassName('popup')[0];
+        function yes(){
+            popup.style.cssText='top:100px;';
+            document.body.style.cssText='background-color:rgba(0,0,0,0.2);';
+        }
+        function closer(){
+            popup.style.cssText='top:-500px;';
+            document.body.style.cssText='background-color:white;';
+
+        }
+    </script>
+</body>
+</html>

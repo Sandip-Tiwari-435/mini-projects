@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <div class="sign"><div class="text">X</div></div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="container">
+        <button id="first">Sidenav overlay</button>
+        <button id="second">Sidenav push</button>
+        <button id="third">Sidenav push w/opacity</button>
+    </div>
+    
+    <script>
+        var button=document.getElementsByTagName('button');
+        var text=document.getElementsByClassName('text')[0];
+        var cont=document.getElementsByClassName('container')[0];
+        var sidena=document.getElementsByClassName("sidenav");
+        button[0].addEventListener("click",function(){
+            sidena[0].style.cssText="width:300px;";
+        })
+        button[1].addEventListener("click",function(){
+            sidena[0].style.cssText="width:300px;";
+            cont.style.marginLeft='200px';
+
+        })
+        button[2].addEventListener("click",function(){
+            sidena[0].style.cssText="width:300px;";
+            cont.style.marginLeft='200px';
+            document.body.style.cssText='background-color:rgba(0,0,0,0.4)';
+
+        })
+        text.addEventListener("click",function(){
+            sidena[0].style.cssText="width:0px;";
+            cont.style.marginLeft='0px';
+            document.body.style.cssText='background-color:white';
+
+
+        })
+    </script>
+</body>
+</html>

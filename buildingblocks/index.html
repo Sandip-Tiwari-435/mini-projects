@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building socks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid-container">
+            <div class="item1">
+                <div draggable="true" id="o1"></div>
+            </div>
+            <div class="item2">
+                <div id="o2"></div>
+            </div>
+            <div class="item3">
+                <div id="o3"></div>
+            </div>
+            <div class="item4">
+                <div id="o4"></div>
+            </div>
+            <div class="item5">
+                <div id="o5"></div>
+            </div>
+            <div class="item6">
+                <div id="o6"></div>
+            </div>
+            <div class="item7">
+                <div id="o7"></div>
+            </div>
+            <div class="item8">
+                <div id="o8"></div>
+            </div>
+            <div class="item9">
+                <div id="o9"></div>
+            </div>
+            <div class="item10">
+                <div id="o10"></div>
+            </div>
+            <div class="item11">
+                <div id="o11"></div>
+            </div>
+            <div class="item12">
+                <div id="o12"></div>
+            </div>
+            <div class="item13">
+                <div id="o13"></div>
+            </div>
+        </div>
+        <div ondrop="drop(event)" dropzone="copy" id="work-space">
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('o1').addEventListener('drag', function (event) {event.preventDefault(); console.log("Yes"); });
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        
+    </script>
+</body>
+
+</html>
